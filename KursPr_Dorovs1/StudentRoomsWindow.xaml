@@ -1,0 +1,39 @@
+﻿<Window x:Class="KursPr_Dorovs.StudentRoomsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursPr_Dorovs"
+        mc:Ignorable="d"
+        Title="Список інформації про заселення та виселення студентів" Height="530" Width="750">
+    <Grid>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Padding="20,5,20,5" Margin="0,10,0,0" Width="400" Click="Button_Click_3">
+            <TextBlock Text="Змінити кімнату проживання студента" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Padding="20,5,20,5" Margin="0,51,0,0" Width="400" Click="Button_Click_2">
+            <TextBlock Text="Повернутися на початковий екран" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Padding="20,5,20,5" Margin="549,391,0,0" Width="161" Click="Button_Click">
+            <TextBlock Text="Змінити" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Padding="20,5,20,5" Margin="549,438,0,0" Width="161" Click="Button_Click_1">
+            <TextBlock Text="Видалити" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <ListView x:Name="StudentRoomsItemList" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="16" Margin="0,92,0,128">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Номер кімнати" Width="130" DisplayMemberBinding="{Binding Room.RoomId}"/>
+                    <GridViewColumn Header="ПІБ" Width="250" DisplayMemberBinding="{Binding Student.StName}"/>
+                    <GridViewColumn Header="Дата заселення" Width="170" DisplayMemberBinding="{Binding DateIn}"/>
+                    <GridViewColumn Header="Дата виселення" Width="170" DisplayMemberBinding="{Binding DateOut}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Номер кімнати:" FontSize="16" HorizontalAlignment="Left" Margin="264,393,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DateOutTextBox" Text="{Binding SelectedItem.DateOut, ElementName=StudentRoomsItemList, Mode=OneWay}" FontSize="16" HorizontalAlignment="Left" Margin="139,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Дата заселення:" FontSize="16" HorizontalAlignment="Left" Margin="12,440,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DateInTextBox" Text="{Binding SelectedItem.DateIn, ElementName=StudentRoomsItemList, Mode=OneWay}" FontSize="16" HorizontalAlignment="Left" Margin="138,444,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Дата виселення:" FontSize="16" HorizontalAlignment="Left" Margin="10,393,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="RoomNumberTextBox" Text="{Binding SelectedItem.RoomId, ElementName=StudentRoomsItemList, Mode=OneWay}" FontSize="16" HorizontalAlignment="Left" Margin="393,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>

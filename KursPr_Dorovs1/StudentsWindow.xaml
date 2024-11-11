@@ -1,0 +1,44 @@
+﻿<Window x:Class="KursPr_Dorovs.StudentsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursPr_Dorovs"
+        mc:Ignorable="d"
+        Title="Список інформації про студентів" Height="530" Width="860">
+    <Grid>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Padding="20,5,20,5" Margin="10,10,0,0" Width="400" Click="Button_Click">
+            <TextBlock Text="Створити нового студента" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Padding="20,5,20,5" Margin="431,10,0,0" Width="399" Click="Button_Click_1">
+            <TextBlock Text="Перевести усіх студентів в наступну групу" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Padding="20,5,20,5" Margin="0,51,0,0" Width="400" Click="Button_Click_4">
+            <TextBlock Text="Повернутися на початковий екран" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <ListView x:Name="StudentsItemList" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="16" Margin="0,92,0,140">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ПІБ" Width="265" DisplayMemberBinding="{Binding StName}"/>
+                    <GridViewColumn Header="Мобільний номер" Width="180" DisplayMemberBinding="{Binding Phone}"/>
+                    <GridViewColumn Header="Група" Width="90" DisplayMemberBinding="{Binding Group}"/>
+                    <GridViewColumn Header="Примітки" Width="300" DisplayMemberBinding="{Binding Note}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Padding="20,5,20,5" Margin="628,438,0,0" Width="202" Click="Button_Click_3">
+            <TextBlock Text="Змінити студента" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Padding="20,5,20,5" Margin="628,383,0,0" Width="202" Click="Button_Click_2">
+            <TextBlock Text="Видалити студента" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Label Content="ПІБ:" FontSize="16" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top"/>
+        <Label Content="Мобільний номер:" FontSize="16" HorizontalAlignment="Left" Margin="249,381,0,0" VerticalAlignment="Top"/>
+        <Label Content="Група:" FontSize="16" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top"/>
+        <Label Content="Примітки:" FontSize="16" HorizontalAlignment="Left" Margin="249,435,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NameTextBox" Text="{Binding SelectedItem.StName, ElementName=StudentsItemList, Mode=OneWay}" FontSize="16" HorizontalAlignment="Left" Margin="62,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="39"/>
+        <TextBox x:Name="PhoneTextBox" Text="{Binding SelectedItem.Phone, ElementName=StudentsItemList, Mode=OneWay}" FontSize="16" HorizontalAlignment="Left" Margin="406,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="GroupTextBox" Text="{Binding SelectedItem.Group, ElementName=StudentsItemList, Mode=OneWay}" FontSize="16" HorizontalAlignment="Left" Margin="85,439,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="NoteTextBox" Text="{Binding SelectedItem.Note, ElementName=StudentsItemList, Mode=OneWay}" FontSize="16" HorizontalAlignment="Left" Margin="353,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Height="33"/>
+    </Grid>
+</Window>

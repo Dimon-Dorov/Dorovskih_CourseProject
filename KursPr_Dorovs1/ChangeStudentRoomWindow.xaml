@@ -1,0 +1,18 @@
+﻿<Window x:Class="KursPr_Dorovs.ChangeStudentRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursPr_Dorovs"
+        mc:Ignorable="d"
+        Title="Змінити кімнату проживання студента" Height="180" Width="360">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" FontSize="16" Margin="10,10,0,0" TextWrapping="Wrap" Text="ПІБ студента:" VerticalAlignment="Top"/>
+        <ComboBox x:Name="StNameItemList" FontSize="16" DisplayMemberPath="StName" Margin="132,7,10,108"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="16" Margin="10,0,0,0" TextWrapping="Wrap" Text="Номер кімнати проживання:" VerticalAlignment="Center" Width="122"/>
+        <ComboBox x:Name="RoomIdItemList" FontSize="16" DisplayMemberPath="RoomId" Margin="132,51,10,55"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Padding="20,5,20,5" Margin="0,104,0,0" Width="142" Height="30" Click="Button_Click">
+            <TextBlock Text="Змінити" FontSize="16" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+    </Grid>
+</Window>

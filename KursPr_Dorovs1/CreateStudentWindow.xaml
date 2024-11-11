@@ -1,0 +1,22 @@
+﻿<Window x:Class="KursPr_Dorovs.CreateStudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursPr_Dorovs"
+        mc:Ignorable="d"
+        Title="Створити студента" Height="210" Width="430">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="ПІБ:" VerticalAlignment="Top"/>
+        <TextBox x:Name="PhoneTextBox" HorizontalAlignment="Left" Margin="173,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="172,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248"/>
+        <TextBox x:Name="GroupTextBox" HorizontalAlignment="Left" Margin="173,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"/>
+        <TextBox x:Name="NoteTextBox" HorizontalAlignment="Left" Margin="173,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" Text="Мобільний номер:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,78,0,0" TextWrapping="Wrap" Text="Примітки про студента:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,57,0,0" TextWrapping="Wrap" Text="Номер групи:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,104,0,0" TextWrapping="Wrap" Text="Номер кімнати проживання:" VerticalAlignment="Top"/>
+        <ComboBox x:Name="RoomIdItemList" DisplayMemberPath="RoomId" Margin="173,102,10,46"/>
+        <Button Content="Створити студента" HorizontalAlignment="Center" Margin="0,127,0,0" VerticalAlignment="Top" Width="132" Height="25" Click="Button_Click"/>
+    </Grid>
+</Window>

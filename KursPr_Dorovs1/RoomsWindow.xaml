@@ -1,0 +1,35 @@
+﻿<Window x:Class="KursPr_Dorovs.RoomsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursPr_Dorovs"
+        mc:Ignorable="d"
+        Title="Список інформації про кімнати" Height="495" Width="420">
+    <Grid>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Padding="20,5,20,5" Margin="0,10,0,0" Width="380" Click="Button_Click_3">
+            <TextBlock Text="Повернутися на початковий екран" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <ListView x:Name="RoomsItemList" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="16" Margin="0,51,0,222">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Номер кімнати" Width="200" DisplayMemberBinding="{Binding RoomId}"/>
+                    <GridViewColumn Header="Кількість ліжок" Width="200" DisplayMemberBinding="{Binding SleepCount}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Номер кімнати:" FontSize="16" HorizontalAlignment="Left" Margin="11,257,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="RoomNumberTextBox" Text="{Binding SelectedItem.RoomId, ElementName=RoomsItemList, Mode=OneWay}" FontSize="16" HorizontalAlignment="Left" Margin="168,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Кількість ліжок:" FontSize="16" HorizontalAlignment="Left" Margin="11,288,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="BedCountTextBox" Text="{Binding SelectedItem.SleepCount, ElementName=RoomsItemList, Mode=OneWay}" FontSize="16" HorizontalAlignment="Left" Margin="168,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Padding="20,5,20,5" Margin="0,333,0,0" Width="380" Click="Button_Click">
+            <TextBlock Text="Створити кімнату" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Padding="20,5,20,5" Margin="0,415,0,0" Width="380" Click="Button_Click_1">
+            <TextBlock Text="Змінити кімнату" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Padding="20,5,20,5" Margin="0,374,0,0" Width="380" Click="Button_Click_2">
+            <TextBlock Text="Видалити кімнату" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+    </Grid>
+</Window>
