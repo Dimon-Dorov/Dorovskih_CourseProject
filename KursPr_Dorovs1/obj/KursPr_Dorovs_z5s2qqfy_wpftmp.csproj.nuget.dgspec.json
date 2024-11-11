@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Visual_Studio_work\\KursPr_Dorovs\\KursPr_Dorovs\\KursPr_Dorovs.csproj": {}
+  },
+  "projects": {
+    "E:\\Visual_Studio_work\\KursPr_Dorovs\\KursPr_Dorovs\\KursPr_Dorovs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Visual_Studio_work\\KursPr_Dorovs\\KursPr_Dorovs\\KursPr_Dorovs.csproj",
+        "projectName": "KursPr_Dorovs",
+        "projectPath": "E:\\Visual_Studio_work\\KursPr_Dorovs\\KursPr_Dorovs\\KursPr_Dorovs.csproj",
+        "packagesPath": "C:\\Users\\ALEX\\.nuget\\packages\\",
+        "outputPath": "E:\\Visual_Studio_work\\KursPr_Dorovs\\KursPr_Dorovs\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ALEX\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
